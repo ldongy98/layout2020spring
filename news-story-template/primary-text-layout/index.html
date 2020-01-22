@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>News Story Template</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>[v-cloak] { display: none; }</style>
   </head>
@@ -10,47 +11,36 @@
       
       <!-- Main Story -->
       <h1>{{ story.source.name }}</h1>
+      <h2>
+      {{ story.subtitle }}
+       {{ story.date }}    
+      </h2>
     
 
-
-<!-- 
-
-
-
-      {{ story.subtitle }}
-      {{ story.date }}
-
-
-
-
-
-
-
-
-
-
-
-
-      <span v-for="tag in story.tags">{{ tag }}</span>
+      <span v-for="tag in story.tags" class="tagg">{{ tag }}</span>
       <img v-bind:src="story.image.url">
-      {{ story.image.caption }}
+      <p class="caption">{{ story.image.caption }}</p>
       <a v-bind:href="story.source.url">{{ story.source.name }}</a>
-      <span v-html="story.teaser"></span>
-      <span v-html="story.content"></span>
+      <div class="bodycopy">
+       
+        <span v-html="story.teaser" class="teaser"></span>
+        <span v-html="story.content" class="content"></span>    
+      </div>
 
-       Related Stories
-      <ul>
+
+<!--        Related Stories -->
+<!--       <ul>
         <li v-for="relatedStory in relatedStories">
           <div v-on:click="load(relatedStory)">
             {{ relatedStory.title }}
-            <img v-bind:src="relatedStory.image.url">
+            <img v-bind:src="relatedStory.image.url"> -->
           </div>
         </li>
       </ul>
--->
-      Useful debugging info, you can comment this section out when you don't need it.
-      <pre>The story object: {{ story | json }}</pre>
-      <pre>The relatedStories array: {{ relatedStories | json }}</pre>
+  <!--     Useful debugging info, you can comment this section out when you don't need it. -->
+<!--       <pre>The story object: {{ story | json }}</pre>
+      <pre>The relatedStories array: {{ relatedStories | json }}</pre> -->
+
  
     </div>
 

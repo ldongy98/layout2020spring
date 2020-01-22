@@ -1,0 +1,36 @@
+body {
+	font-family: arial;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+h1 {
+	font-weight: thick;
+}
+
+.bodycopy {
+	max-width: 50em;
+}
+
+img {
+	max-width: 50em;
+	clear: both;
+}
+
+.teaser p:first-of-type {
+	font-style: italic;
+}
+
+.teaser {
+	border-top: 5px solid red;
+	border-bottom: 5px dotted red;
+}
+
+.caption {
+	font-size: 9px;
+	margin-top: 0;
+}
+
+.tagg {
+	margin-right: 300px;
+}
